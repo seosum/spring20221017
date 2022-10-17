@@ -7,7 +7,7 @@ import lombok.Setter;
 @Setter
 public class JavaBean2 {
 	private String company;
-	private String int score;
+	private int score;
 	private String location;
 	
 	
