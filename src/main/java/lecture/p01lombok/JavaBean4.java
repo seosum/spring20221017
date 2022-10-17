@@ -12,4 +12,9 @@ import lombok.ToString;
 public class JavaBean4 {
 	private String address;
 	private int score;
+	
 }
+
+
+
+

@@ -11,5 +11,6 @@ public class JavaBean7 {
 	private final String name;
 	private final int age;
 	private String address;
+	
 
 }
