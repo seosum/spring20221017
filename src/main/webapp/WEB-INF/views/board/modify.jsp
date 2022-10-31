@@ -24,10 +24,10 @@
 	<input type="submit" value="수정" data-bs-toggle="modal" data-bs-target="#modifyModal">
 	
 	<c:url value="/board/remove" var="removeLink"/>
-	<form action="${removeLink }" method="post">
+	<form id="removeForm" action="${removeLink }" method="post">
 	<input type="hidden" name="id" value="${board.id }">
-	<input type="submit" value="삭제">
 	</form>
+	<input type="submit" value="삭제" data-bs-toggle="modal" data-bs-target="#removeModal">
 
 
 	<!-- modify Modal -->
@@ -48,12 +48,37 @@
 	    </div>
 	  </div>
 	</div>
+	
+	<!-- remove Modal -->
+	<div class="modal fade" id="removeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h1 class="modal-title fs-5" id="exampleModalLabel">삭제 확인</h1>
+	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	      </div>
+	      <div class="modal-body">
+	        삭제 하시겠습니까?
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+	        <button id="removeConfirmButton" type="button" class="btn btn-danger">확인</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 <script>
+	// 수정확인 버튼 클릭하면 수정 form 전송
 	document.querySelector("#modifyConfirmButton").addEventListener("click", function() {
 		document.querySelector("#modifyForm").submit();
+	});
+	
+	// 삭제확인 버튼 클릭하면 삭제 form 전송 
+	document.querySelector("#removeConfirmButton").addEventListener("click", function() {
+		document.querySelector("#removeForm").submit();
 	});
 </script>
 </body>
