@@ -41,13 +41,13 @@ public class Controller35 {
 	
 	@RequestMapping("sub03")
 	public void method3() {
-		List<String> berlin = mapper.getCustomerNameByCityAndCountry("Berlin", "Germany");
-		List<String> london = mapper.getCustomerNameByCityAndCountry("London", "UK");
+		List<String> berlin = mapper.getCustomerNameByCityAndCountry("Germany", "Berlin");
+		List<String> london = mapper.getCustomerNameByCityAndCountry("UK", "London");
 		
 		System.out.println(berlin);
 		System.out.println(london);
 	}
-
+	
 	@RequestMapping("sub04")
 	public void method4() {
 		String londona = mapper.getSupplierNameByCityAndCountry("UK", "Londona");
@@ -68,20 +68,30 @@ public class Controller35 {
 	}
 	
 	// /ex35/sub06?name=New Orleans Cajun Delights&country=USA
-		// ---> Shelley Burke
-		
-		// /ex35/sub06?name=Grandma Kelly's Homestead&country=USA
-		// ---> Regina Murphy
-		@RequestMapping("sub06")
-		public void method6(JavaBean04 bean2) {
-			String c = mapper.getSupplierContactName(bean2);
-			System.out.println(c);
-		}
-		
-		@RequestMapping("sub07")
-		public void method7(JavaBean16 p1, JavaBean17 p2) {
-			
-			List<String> list = mapper.getProductName(p1, p2);
-			list.forEach(System.out::println);
-		}
+	// ---> Shelley Burke
+	
+	// /ex35/sub06?name=Grandma Kelly's Homestead&country=USA
+	// ---> Regina Murphy
+	@RequestMapping("sub06")
+	public void method6(JavaBean04 b) {
+		String c = mapper.getSupplierContactName(b);
+		System.out.println(c);
 	}
+	
+	// /ex35/sub07?categoryId=1&price=10.00
+	
+	// /ex35/sub07?categoryId=2&price=20.00
+	
+	@RequestMapping("sub07")
+	public void method7(JavaBean16 p1, JavaBean17 p2) {
+		
+		List<String> list = mapper.getProductName(p1, p2);
+		list.forEach(System.out::println);
+	}
+}
+
+
+
+
+
+

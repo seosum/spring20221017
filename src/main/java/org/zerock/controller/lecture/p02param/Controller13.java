@@ -1,6 +1,7 @@
 package org.zerock.controller.lecture.p02param;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.zerock.domain.lecture.JavaBean01;
 import org.zerock.domain.lecture.JavaBean02;
@@ -27,8 +28,18 @@ public class Controller13 {
 	}
 	
 	@RequestMapping("sub03")
-	public void method3(JavaBean03 params) {
+	public void method3(@ModelAttribute JavaBean03 params) {
 		System.out.println(params);
 	}
 	
 }
+
+
+
+
+
+
+
+
+
+

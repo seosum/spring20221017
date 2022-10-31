@@ -31,3 +31,14 @@ SELECT * FROM TableA A LEFT JOIN TableB B ON A.col1 = B.c1;
 SELECT * FROM TableA A RIGHT OUTER JOIN TableB B ON A.col1 = B.c1;
 -- OUTER : 생략가능
 SELECT * FROM TableA A RIGHT JOIN TableB B ON A.col1 = B.c1;
+
+
+
+
+
+
+
+
+
+
+

@@ -32,6 +32,8 @@ SHOW VARIABLES WHERE Variable_name = 'autocommit';
 
 -- AUTO COMMIT --> disable
 SET autocommit = 0;
+-- AUTO COMMIT --> enable
+SET autocommit = 1;
 
 -- 송금업무
 -- 2번 고객이 1번 고객에게 5000원 송금함
@@ -46,3 +48,9 @@ SET balance = balance + 5000
 WHERE customerId = 1;
 
 COMMIT;
+
+
+
+
+
+

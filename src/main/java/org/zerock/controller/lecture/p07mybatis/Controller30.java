@@ -30,15 +30,15 @@ public class Controller30 {
 		 */
 		
 		JavaBean05 employee = mapper.getEmployee();
-		System.out.println(employee.getFirstname());
-		System.out.println(employee.getLastname());
+		System.out.println(employee.getFirstName());
+		System.out.println(employee.getLastName());
 	}
 	
 	@RequestMapping("sub03")
 	public void method3() {
 		JavaBean05 emp = mapper.getEmployee2();
-		System.out.println(emp.getFirstname());
-		System.out.println(emp.getLastname());
+		System.out.println(emp.getFirstName());
+		System.out.println(emp.getLastName());
 	}
 	
 	@RequestMapping("sub04")
@@ -50,22 +50,30 @@ public class Controller30 {
 	
 	@RequestMapping("sub05")
 	public void method5() {
-		
 		/*
-		 * SELECT
-		 * 	ProductName,
-		 * 	Price
-		 * FROM
-		 *  Products
-		 * WHERE
-		 *  ProductID = 8 
+		 * SELECT 
+		 *   ProductName,
+		 *   Price
+		 * FROM 
+		 *   Products
+		 * WHERE 
+		 *   ProductID = 8
+		 * 
 		 */
-		
 		JavaBean06 prod = mapper.getProduct();
-		System.out.println(prod.getProductName());
+		System.out.println(prod.getName());
 		System.out.println(prod.getPrice());
 	}
 }
+
+
+
+
+
+
+
+
+
 
 
 

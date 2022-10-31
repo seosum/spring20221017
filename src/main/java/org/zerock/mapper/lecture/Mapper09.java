@@ -18,10 +18,12 @@ public interface Mapper09 {
 	
 	String getContactName(JavaBean04 bean1);
 
-	String getSupplierContactName(JavaBean04 bean2);
+	String getSupplierContactName(JavaBean04 b);
 	
 	List<String> getProductName(JavaBean16 arg1, JavaBean17 arg2);
+	
 }
+
 
 
 

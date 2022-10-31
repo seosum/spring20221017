@@ -6,11 +6,9 @@ import lombok.Data;
 
 @Data
 public class JavaBean13 { // category
-	
+
 	private int id;
 	private String name;
 	
 	private List<JavaBean14> product;
-
-
 }

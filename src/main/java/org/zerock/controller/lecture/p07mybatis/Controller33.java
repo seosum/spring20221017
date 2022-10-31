@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.zerock.domain.lecture.JavaBean11;
+import org.zerock.domain.lecture.JavaBean12;
 import org.zerock.mapper.lecture.Mapper06;
 
 @Controller
@@ -30,6 +31,13 @@ SELECT
 FROM Products p JOIN Suppliers s ON p.SupplierID = s.SupplierID
 WHERE s.SupplierID = 1
 	 */
+	@RequestMapping("sub02")
+	public void method2() {
+		JavaBean12 supplier = mapper.getSupplier();
+		System.out.println(supplier.getId());
+		System.out.println(supplier.getName());
+		supplier.getProductName().forEach(System.out::println);
+	}
 }
 
 

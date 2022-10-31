@@ -9,7 +9,6 @@ import org.zerock.domain.lecture.JavaBean05;
 import org.zerock.domain.lecture.JavaBean06;
 import org.zerock.mapper.lecture.Mapper04;
 
-
 @Controller
 @RequestMapping("ex31")
 public class Controller31 {
@@ -18,15 +17,24 @@ public class Controller31 {
 	private Mapper04 mapper;
 	
 	@RequestMapping("sub01")
-	private void method1() {
+	public void method1() {
 		List<JavaBean06> productList = mapper.getProductList();
 		productList.forEach(System.out::println);
 	}
 	
 	@RequestMapping("sub02")
-	public void method02() {
+	public void method2() {
 		List<JavaBean05> employeeList = mapper.getEmployeeList();
 		employeeList.forEach(System.out::println);
-		
 	}
 }
+
+
+
+
+
+
+
+
+
+

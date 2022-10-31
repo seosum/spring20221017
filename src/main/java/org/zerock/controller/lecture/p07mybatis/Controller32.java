@@ -51,7 +51,19 @@ WHERE
 		System.out.println(product.getSupplier().getId()); // 4
 		System.out.println(product.getSupplier().getName()); // Tokyo Traders
 		System.out.println(product.getSupplier().getPhone()); // (03) 3555-5011
-	
+		
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
 

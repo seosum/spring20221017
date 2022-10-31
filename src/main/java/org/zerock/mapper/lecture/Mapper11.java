@@ -12,7 +12,7 @@ public interface Mapper11 {
 
 	int updateSupplier(JavaBean19 supplier);
 
-	void updateBank(int account, int money);
+	int updateBank(int account, int money);
 }
 
 

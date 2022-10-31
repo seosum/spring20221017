@@ -7,9 +7,17 @@ import org.springframework.context.annotation.Configuration;
 public class Config {
 	
 	@Bean
-	public Servlet servlet() {
-		return new Servlet();
+	public Controller controller() {
+		return new Controller(dao());
 	}
+	
+	@Bean
+	public Servlet servlet() {
+		Servlet s = new Servlet();
+		s.setDao(dao());
+		return s;
+	}
+	
 	@Bean
 	public Dao dao() {
 		return new Dao();

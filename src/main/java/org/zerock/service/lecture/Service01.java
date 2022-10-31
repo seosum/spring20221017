@@ -7,6 +7,7 @@ import org.zerock.domain.lecture.JavaBean18;
 import org.zerock.mapper.lecture.Mapper11;
 
 @Service
+@Transactional
 public class Service01 {
 	
 	@Autowired
@@ -17,14 +18,20 @@ public class Service01 {
 		return mapper.getCustomerById(id);
 	}
 
-	@Transactional
+	
 	public void transferMoney() {
 		// 1번고객의 돈을 (500원)
 		// 2번 고객에게 전달
-		mapper.updateBank(1, -500);
+		int cnt = mapper.updateBank(1, -500);
+		System.out.println(cnt + "건 성공");
+		int a = 3/0;
+		
 		mapper.updateBank(2, 500);
 	}
 
 }
+
+
+
 
 

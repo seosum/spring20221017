@@ -38,7 +38,32 @@ public class Controller26 {
 	// sub02 : 요청 경로
 	// method2()
 	// 새 직원을 입력하고 생성된 키를 sysout으로 출력하는 코드 작성
+	@RequestMapping("sub02")
+	public void method2() throws Exception  {
+		String sql = "INSERT INTO Employees (firstName) VALUES (?)";
+		try (Connection con = dataSource.getConnection();
+				PreparedStatement pstmt = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
+			pstmt.setString(1, "PARK JI SUNG");
+			
+			pstmt.executeUpdate();
+			ResultSet rs = pstmt.getGeneratedKeys();
+			
+			if (rs.next()) {
+				int key = rs.getInt(1);
+				System.out.println(key + "번 직원 입력됨");
+			}
+		}
+	}
 }
+
+
+
+
+
+
+
+
+
 
 
 
