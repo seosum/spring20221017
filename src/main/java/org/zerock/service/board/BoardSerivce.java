@@ -18,7 +18,7 @@ public class BoardSerivce {
 		return mapper.insert(board);
 	}
 
-	public List<BoardDto> listBoard(int page, String keyword, PageInfo pageInfo) {
+	public List<BoardDto> listBoard(int page, String type, String keyword, PageInfo pageInfo) {
 		int records = 10;
 		int offset = (page - 1) * records;
 		
@@ -47,7 +47,7 @@ public class BoardSerivce {
 		pageInfo.setRightPageNumber(rightPageNumber);
 		pageInfo.setLastPageNumber(lastPage);
 		
-		return mapper.list(offset, records, "%" + keyword + "%");
+		return mapper.list(offset, records, type, "%" + keyword + "%");
 	}
 
 	public BoardDto get(int id) {

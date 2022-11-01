@@ -23,6 +23,23 @@
 		inserted
 	FROM Board
 	WHERE 
+	
+		<trim prefixOverrides="OR">
+		<if test="type == 'all' or type == 'title'">
+		OR title LIKE #{keyword}
+		</if>
+		</trim>
+	
+		<if test="type == 'all' or type == 'content'">
+		OR content LIKE #{keyword}
+		
+		</if>
+		
+		<if test="type == 'all' or type == 'writer">
+		OR writer LIKE #{keyword}
+		
+		</if>
+	
 		title LIKE #{keyword}
 		OR content LIKE #{keyword}
 		OR writer LIKE #{keyword}
