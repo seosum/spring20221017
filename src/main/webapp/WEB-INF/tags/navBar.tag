@@ -25,9 +25,9 @@
       <!-- select 옵션 -->
 	<select name="t" id="" class="form-select">
 		<option value="all">전체</option>
-		<option value="title">제목</option>
-		<option value="content">본문</option>
-		<option value="writer">작성자</option>
+		<option value="title" ${param.t == 'title' ? 'selected' : '' }>제목</option>
+		<option value="content" ${param.t == 'content' ? 'selected' : '' }>본문</option>
+		<option value="writer" ${param.t == 'writer' ? 'selected' : '' }>작성자</option>
 	</select>
 
         <input value="${param.q }" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q">

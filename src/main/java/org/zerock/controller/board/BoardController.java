@@ -2,8 +2,6 @@ package org.zerock.controller.board;
 
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -62,7 +60,7 @@ public class BoardController {
 		// forward
 	}
 
-	/// 위 list 메소드 파라미터 PageInfo에 일어나는 일을 풀어서 작성
+	// 위 list 메소드 파라미터 PageInfo에 일어나는 일을 풀어서 작성
 	/*
 	private void list2(
 			@RequestParam(name = "page", defaultValue = "1") int page,

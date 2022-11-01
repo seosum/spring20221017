@@ -22,7 +22,7 @@ public class BoardSerivce {
 		int records = 10;
 		int offset = (page - 1) * records;
 		
-		int countAll = mapper.countAll(); // SELECT Count(*) FROM Board
+		int countAll = mapper.countAll(type, "%" + keyword + "%"); // SELECT Count(*) FROM Board
 		int lastPage = (countAll - 1) / records + 1;
 		
 		int leftPageNumber = (page - 1) / 10 * 10 + 1;
@@ -65,12 +65,6 @@ public class BoardSerivce {
 	}
 	
 }
-
-
-
-
-
-
 
 
 
