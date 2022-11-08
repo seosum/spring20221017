@@ -55,7 +55,7 @@
 									</c:if>
 								</td>
 								<td>${board.writer }</td>
-								<td>${board.inserted }</td>
+								<td>${board.ago }</td>
 							</tr>
 						</c:forEach> 
 					</tbody>

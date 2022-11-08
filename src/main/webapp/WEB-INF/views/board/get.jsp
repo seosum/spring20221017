@@ -43,9 +43,13 @@
 					<textarea rows="5" class="form-control" readonly>${board.content }</textarea>
 				</div>
 				
-				<!-- 이미지 출력 -->
+				<%-- 이미지 출력 --%>
 				<div>
-					<img src="/image/${board.id }/${board.fileName}" alt="">
+					<c:forEach items="${board.fileName }" var="name">
+						<div>
+							<img class="img-fluid img-thumbnail" src="/image/${board.id }/${name}" alt="">
+						</div>
+					</c:forEach>		
 				</div>
 				
 				<div class="mb-3">
@@ -207,8 +211,9 @@ function listReply() {
 						<div>
 							\${item.content}
 						</div>
-							<small>
-								\${item.inserted}
+							<small class="text-muted">
+								<i class="fa-regular fa-clock"></i> 
+								\${item.ago}
 							</small>
 					</div>
 					<div>
@@ -281,7 +286,6 @@ document.querySelector("#replySendButton1").addEventListener("click", function()
 </script>
 </body>
 </html>
-
 
 
 
