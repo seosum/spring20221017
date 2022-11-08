@@ -4,7 +4,6 @@ import lombok.Data;
 
 @Data
 public class PageInfo {
-	
 	private boolean hasPrevButton;
 	private boolean hasNextButton;
 	private int jumpPrevPageNumber;
@@ -13,5 +12,5 @@ public class PageInfo {
 	private int lastPageNumber;
 	private int leftPageNumber;
 	private int rightPageNumber;
-
+	
 }

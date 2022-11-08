@@ -46,6 +46,13 @@
 									<a href="${getLink }">
 										${board.title }
 									</a>
+									
+									<c:if test="${board.countReply > 0 }">
+										<span class="badge rounded-pill text-bg-light">
+											<i class="fa-regular fa-comment-dots"></i>
+											${board.countReply }
+										</span>
+									</c:if>
 								</td>
 								<td>${board.writer }</td>
 								<td>${board.inserted }</td>
@@ -139,6 +146,10 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 </html>
+
+
+
+
 
 
 

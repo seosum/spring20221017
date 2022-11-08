@@ -16,7 +16,7 @@
 		<div class="row">
 			<div class="col">
 				<h1>게시물 작성</h1>
-				<form action="" method="post">
+				<form action="" method="post" enctype="multipart/form-data">
 					<div class="mb-3">
 						<label for="" class="form-label">제목</label>
 						<input type="text" class="form-control" name="title">
@@ -25,6 +25,12 @@
 						<label for="" class="form-label">본문</label>
 						<textarea rows="5" class="form-control" name="content"></textarea>
 					</div>
+					
+					<div class="mb-3">
+						<label for="" class="form-label">파일</label>
+						<input type="file" accept="image/*" class="form-control" name="file">
+					</div>
+					
 					<div class="mb-3">
 						<label for="" class="form-label">작성자</label>
 						<input type="text" class="form-control" name="writer">

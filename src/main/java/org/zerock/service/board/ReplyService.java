@@ -9,6 +9,7 @@ import org.zerock.mapper.board.ReplyMapper;
 
 @Service
 public class ReplyService {
+	
 	@Autowired
 	private ReplyMapper mapper;
 
@@ -35,5 +36,8 @@ public class ReplyService {
 	}
 
 }
+
+
+
 
 
