@@ -15,5 +15,7 @@ public interface ReplyMapper {
 
 	int update(ReplyDto reply);
 
+	int deleteByBoardId(int id);
+
 
 }
