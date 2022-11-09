@@ -47,10 +47,19 @@
 										${board.title }
 									</a>
 									
+									<%-- 댓글 수 출력 --%>
 									<c:if test="${board.countReply > 0 }">
 										<span class="badge rounded-pill text-bg-light">
 											<i class="fa-regular fa-comment-dots"></i>
 											${board.countReply }
+										</span>
+									</c:if>
+									
+									<%-- 파일 수 출력 --%>
+									<c:if test="${board.countFile > 0 }">
+										<span class="badge rounded-pill text-bg-light">
+											<i class="fa-regular fa-file"></i>
+											${board.countFile }
 										</span>
 									</c:if>
 								</td>

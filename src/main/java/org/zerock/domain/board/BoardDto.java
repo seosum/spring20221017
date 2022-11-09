@@ -15,6 +15,7 @@ public class BoardDto {
 	private String writer;
 	private LocalDateTime inserted;
 	private int countReply;
+	private int countFile;
 	
 	private List<String> fileName;
 
