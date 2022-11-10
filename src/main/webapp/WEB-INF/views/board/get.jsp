@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="java.net.*" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="my" tagdir="/WEB-INF/tags" %>
 <!DOCTYPE html>
@@ -47,7 +48,7 @@
 				<div>
 					<c:forEach items="${board.fileName }" var="name">
 						<div>
-							<img class="img-fluid img-thumbnail" src="/image/${board.id }/${name}" alt="">
+							<img class="img-fluid img-thumbnail" src="${imgUrl }/${board.id }/${URLEncoder.encode(name, 'utf-8')}" alt="">
 						</div>
 					</c:forEach>		
 				</div>
@@ -286,6 +287,11 @@ document.querySelector("#replySendButton1").addEventListener("click", function()
 </script>
 </body>
 </html>
+
+
+
+
+
 
 
 
