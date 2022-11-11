@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.zerock.domain.lecture.JavaBean20;
 import org.zerock.domain.lecture.JavaBean21;
 import org.zerock.domain.lecture.JavaBean22;
@@ -67,17 +66,26 @@ public class Controller44 {
 		System.out.println(data);
 	}
 	
-	// 경로에 포함된거라 ▼ 이름 아무거나 
 	@GetMapping("sub15/{id}")
 	public void method15(@PathVariable("id") String id) {
 		System.out.println(id);
 	}
 	
+	// path variable 자동 형변환
+	// 파라미터명과 path variable 이름 같으면 value 속성 생략 가능
 	@GetMapping("sub16/{d}")
-	public void method16(@PathVariable("d") String d) {
-		System.out.println(d); //99
+	public void method16(@PathVariable int d) {
+		System.out.println(d); // 99
 	}
 }
+
+
+
+
+
+
+
+
 
 
 

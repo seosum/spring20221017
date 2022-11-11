@@ -8,7 +8,6 @@ import javax.servlet.ServletContextListener;
  * Application Lifecycle Listener implementation class CustomApplicationListener
  *
  */
-
 public class CustomApplicationListener implements ServletContextListener {
 
     /**
@@ -29,10 +28,21 @@ public class CustomApplicationListener implements ServletContextListener {
      * @see ServletContextListener#contextInitialized(ServletContextEvent)
      */
     public void contextInitialized(ServletContextEvent sce)  { 
-    	// application 영역에 attribute를 추가 
-    	// "https://study-2022-11-10-57425742.s3.ap-northeast-2.amazonaws.com/prj1/board"
+    	// application 영역에 attribute 를 추가
+    	// https://study-2022-08-02-29871827375.s3.ap-northeast-2.amazonaws.com/prj1/board
     	ServletContext application = sce.getServletContext();
-    	application.setAttribute("imgUrl", "https://study-2022-11-10-57425742.s3.ap-northeast-2.amazonaws.com/prj1/board");
+    	application.setAttribute("imgUrl", "https://study-2022-08-02-29871827375.s3.ap-northeast-2.amazonaws.com/prj1/board");
+    
     }
 	
 }
+
+
+
+
+
+
+
+
+
+

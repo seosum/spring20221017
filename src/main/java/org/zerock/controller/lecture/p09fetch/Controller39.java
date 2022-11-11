@@ -22,6 +22,8 @@ public class Controller39 {
 	public void method3() {
 		System.out.println("/ex39/sub03 요청 잘 받음!!!");
 	}
+	
+	
 }
 
 

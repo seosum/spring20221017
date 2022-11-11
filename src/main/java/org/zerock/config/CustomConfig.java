@@ -1,6 +1,5 @@
 package org.zerock.config;
 
-import org.mariadb.jdbc.plugin.credential.aws.AwsCredentialGenerator;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,21 +21,28 @@ public class CustomConfig {
 	
 	@Value("${aws.secretAccessKey}")
 	private String secretAccessKey;
-	
+
 	@Bean
 	public S3Client s3Client() {
 		return S3Client.builder()
 				.credentialsProvider(awsCredentialsProvider())
 				.region(Region.AP_NORTHEAST_2).build();
 	}
-
+	
 	@Bean
 	public AwsCredentialsProvider awsCredentialsProvider() {
-		return StaticCredentialsProvider.create(awscredentials());
+		return StaticCredentialsProvider.create(awsCredentials());
 	}
 	
 	@Bean
-	public AwsCredentials awscredentials() {
+	public AwsCredentials awsCredentials() {
 		return AwsBasicCredentials.create(accessKeyId, secretAccessKey);
-		}
+	}
 }
+
+
+
+
+
+
+

@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("ex42")
 public class Controller42 {
-	
+
 	@RequestMapping("sub")
 	public void method0() {
 		
@@ -23,3 +23,11 @@ public class Controller42 {
 		System.out.println("/ex42/sub02 메소드 일함");
 	}
 }
+
+
+
+
+
+
+
+
